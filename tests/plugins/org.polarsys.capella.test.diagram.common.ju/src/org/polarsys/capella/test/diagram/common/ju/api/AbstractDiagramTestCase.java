@@ -45,6 +45,7 @@ public abstract class AbstractDiagramTestCase extends NonDirtyTestCase {
 
     // We will have to change this when we will test sirius migration popup. (https://bugs.eclipse.org/bugs/show_bug.cgi?id=536995)
     SiriusTransPlugin.getPlugin().getPreferenceStore().setValue(CommonPreferencesConstants.PREF_ASK_TO_SAVE_RESOURCE_AFTER_MIGRATION, Boolean.FALSE);
+    
     super.run(result);
   }
 

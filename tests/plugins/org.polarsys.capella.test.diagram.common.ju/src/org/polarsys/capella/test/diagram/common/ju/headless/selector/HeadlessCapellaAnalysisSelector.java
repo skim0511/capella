@@ -15,6 +15,8 @@ package org.polarsys.capella.test.diagram.common.ju.headless.selector;
 import java.util.Collection;
 
 import org.eclipse.emf.common.util.URI;
+import org.eclipse.sirius.business.api.session.Session;
+import org.eclipse.sirius.business.api.session.danalysis.DAnalysisSession;
 import org.eclipse.sirius.ui.business.api.session.analysis.SmartDialogAnalysisSelector;
 import org.eclipse.sirius.viewpoint.DAnalysis;
 import org.eclipse.sirius.viewpoint.DRepresentation;
@@ -32,8 +34,11 @@ public class HeadlessCapellaAnalysisSelector extends SmartDialogAnalysisSelector
     return airdURI;
   }
 
-  public void setSelectedURI(URI uri) {
+  public void setSelectedURI(Session session, URI uri) {
     this.airdURI = uri;
+    if (session != null) {
+      ((DAnalysisSession) session).setAnalysisSelector(HeadlessCapellaAnalysisSelector.INSTANCE);
+    }
   }
 
   /**
@@ -52,4 +57,5 @@ public class HeadlessCapellaAnalysisSelector extends SmartDialogAnalysisSelector
   protected boolean isEquals(URI uri, URI uri2) {
     return uri.equals(uri2);
   }
+
 }
