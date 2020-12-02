@@ -1,0 +1,28 @@
+--- RCPTT testcase ---
+Format-Version: 1.0
+Contexts: _roPZoKKHEeaAAPJPtfviTA,_ZR3fQKKHEeaAAPJPtfviTA,_0keAwAMFEeaSHsy4D5kUow
+Element-Name: Restart
+Element-Type: testcase
+Element-Version: 3.0
+External-Reference: 
+Id: _T17RMDSJEeuAw-Hsr1jR0A
+Runtime-Version: 2.5.1.M3
+Save-Time: 12/2/20 11:33 AM
+Testcase-Type: ecl
+
+------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa
+Content-Type: text/plain
+Entry-Name: .description
+
+Restart
+------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa--
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac
+Content-Type: text/ecl
+Entry-Name: .content
+
+// Restart Capella in the same workspace empty as ClearPreferences does not work properly
+clean-workspace-before-restart
+restart-aut
+wait-until-eclipse-is-ready
+prepare-AUT-after-restart
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac--
