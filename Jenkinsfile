@@ -51,11 +51,9 @@ pipeline {
     	stage('Build and Package') {
       		steps {
       			script {
-					withCredentials([string(credentialsId: 'sonar-token-capella', variable: 'SONARCLOUD_TOKEN')]) {
-						withEnv(['MAVEN_OPTS=-Xmx4g']) {
-							def sign = github.isPullRequest() ? '' : '-Psign'
-							sh "mvn clean verify -f pom.xml -DjavaDocPhase=none -Pfull ${sign}"
-						}
+					withEnv(['MAVEN_OPTS=-Xmx4g']) {
+						def sign = github.isPullRequest() ? '' : '-Psign'
+						sh "mvn clean verify -f pom.xml -Pfull ${sign}"
 					}
       			}
 	     	}
