@@ -23,6 +23,8 @@ import org.polarsys.capella.test.semantic.queries.ju.testcases.AbstractFunction_
 import org.polarsys.capella.test.semantic.queries.ju.testcases.AbstractFunction_mother_function_allocation;
 import org.polarsys.capella.test.semantic.queries.ju.testcases.AbstractStateParentActiveElements;
 import org.polarsys.capella.test.semantic.queries.ju.testcases.AbstractTypeTypingElements;
+import org.polarsys.capella.test.semantic.queries.ju.testcases.AllRelatedDiagrams;
+import org.polarsys.capella.test.semantic.queries.ju.testcases.AllRelatedTables;
 import org.polarsys.capella.test.semantic.queries.ju.testcases.AvailableForTypeClassExistTest;
 import org.polarsys.capella.test.semantic.queries.ju.testcases.CapabilityExtendedCapabilities;
 import org.polarsys.capella.test.semantic.queries.ju.testcases.CapabilityExtendingCapabilities;
@@ -56,7 +58,10 @@ import org.polarsys.capella.test.semantic.queries.ju.testcases.CapellaRelationsh
 import org.polarsys.capella.test.semantic.queries.ju.testcases.CapellaRelationshipsTraceTarget;
 import org.polarsys.capella.test.semantic.queries.ju.testcases.ComponentAllocatingPhysicalPorts;
 import org.polarsys.capella.test.semantic.queries.ju.testcases.ComponentRepresentingParts;
+import org.polarsys.capella.test.semantic.queries.ju.testcases.ContextualElements;
 import org.polarsys.capella.test.semantic.queries.ju.testcases.DataValueRefReferencedProperty;
+import org.polarsys.capella.test.semantic.queries.ju.testcases.ElementOfInterestOfRepresentations;
+import org.polarsys.capella.test.semantic.queries.ju.testcases.ElementOfInterests;
 import org.polarsys.capella.test.semantic.queries.ju.testcases.EntryExitPoint_ParentRegionTest;
 import org.polarsys.capella.test.semantic.queries.ju.testcases.ExchangeItem_realizedEI;
 import org.polarsys.capella.test.semantic.queries.ju.testcases.ExchangeItem_realizingEI;
@@ -152,7 +157,11 @@ public class SemanticQueriesTestSuite extends BasicTestSuite {
     tests.add(new AbstractStateParentActiveElements());
     tests.add(new ComponentRepresentingParts());
     tests.add(new DataValueRefReferencedProperty());
-
+    tests.add(new AllRelatedDiagrams());
+    tests.add(new AllRelatedTables());
+    tests.add(new ContextualElements());
+    tests.add(new ElementOfInterests());
+    tests.add(new ElementOfInterestOfRepresentations());
     return tests;
   }
 
